@@ -21,7 +21,23 @@ Technologies implemented:
 <li>Ruby on Rails</li>
 </ul>
 
-mockups of the screens a user might encounter, and the way these are linked together
--this must be filled!-
+Mockups:
+
+<p>Welcome Page:</p>
+<img src="/doc/Welcome_Page%20(1).png" alt="Welcome Page">
+<p>Browsing_Courses Page:</p>
+<img src="/doc/Browsing_Courses%20(2).png" alt="Browsing_Courses">
+<p>Courses\_I'm_shopping Page:</p>
+<img src="/doc/Courses_I'm_shopping%20(3).png" alt="Courses_I'm_shopping">
+<p>Courses\_I'm_taking Page:</p>
+<img src="/doc/Courses_I'm_taking%20(4).png" alt="Courses_I'm_taking">
+<p>Recently_viewed Page:</p>
+<img src="/doc/Recently_viewed%20(5).png" alt="Recently_viewed">
+<p>Clicked\_On_Course Page:</p>
+<img src="/doc/Clicked_On_Course%20(6).png" alt="Clicked_On_Course">
+
+<p>the way these are linked together:</p>
+![Alt text](/doc/Links%20general.jpg "Optional title")
+
 
 UvAcoursesApp is implemented by Attila Csala during App Studio 2013.
