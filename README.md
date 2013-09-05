@@ -4,7 +4,7 @@ UvAcoursesApp
 <p>Mobile web app with which users can shop for University of Amsterdam courses<p>
 
 List of features of UvAcoursesApp:
-<ul><i>
+</ul><i>
 <li>supports courses from the Faculty of Science through data maintained from courses.xml.gz</li>
 <li>enables users to browse courses by department/li>
 <li>enables users to search for courses by keyword</li>
@@ -23,20 +23,29 @@ Technologies implemented:
 
 Mockups:
 
-<p>Welcome Page:</p>
+<p><i>Welcome Page:</p>
 <img src="/doc/Welcome_Page%20(1).png" alt="Welcome Page">
-<p>Browsing_Courses Page:</p>
+<p><i>Browsing_Courses Page:</p>
 <img src="/doc/Browsing_Courses%20(2).png" alt="Browsing_Courses">
-<p>Courses\_I'm_shopping Page:</p>
+<p><i>Courses_I'm_shopping Page:</p>
 <img src="/doc/Courses_I'm_shopping%20(3).png" alt="Courses_I'm_shopping">
-<p>Courses\_I'm_taking Page:</p>
+<p><i>Courses_I'm_taking Page:</p>
 <img src="/doc/Courses_I'm_taking%20(4).png" alt="Courses_I'm_taking">
-<p>Recently_viewed Page:</p>
+<p><i>Recently_viewed Page:</p>
 <img src="/doc/Recently_viewed%20(5).png" alt="Recently_viewed">
-<p>Clicked\_On_Course Page:</p>
+<p><i>Clicked_On_Course Page:</p>
 <img src="/doc/Clicked_On_Course%20(6).png" alt="Clicked_On_Course">
 
-<p>the way these are linked together:</p>
+<p>The way these are linked together:</p>
+
+<ul>
+<li>Welcome Page is linked to: <i>Browsing_Courses, Courses_I'm_shopping, Courses_I'm_taking, Recently_viewed</i></li>
+<li>Browsing_Courses Page is linked to: <i>Courses_I'm_shopping, Courses_I'm_taking, Recently_viewed, Clicked_On_Course</i></li>
+<li>Courses_I'm_shopping Page is linked to: <i>Browsing_Courses, Courses_I'm_taking, Recently_viewed, Clicked_On_Course</i></li>
+<li>Courses_I'm_taking Page is linked to: <i>Browsing_Courses, Courses_I'm_shopping, Recently_viewed, Clicked_On_Course</i></li>
+<li>Recently_viewed Page is linked to: <i>Browsing_Courses, Courses_I'm_shopping, Courses_I'm_taking, Clicked_On_Course</i></li>
+<li>Clicked_On_Course is linked to: <i>Browsing_Courses, Courses_I'm_shopping, Courses_I'm_taking, Clicked_On_Course, Recently_viewed Pagev
+</i></ul>
 ![Alt text](/doc/Links%20general.jpg "Optional title")
 
 
