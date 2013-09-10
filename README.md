@@ -4,9 +4,9 @@ UvAcoursesApp
 <p>Mobile web app with which users can shop for University of Amsterdam courses<p>
 
 List of features of UvAcoursesApp:
-</ul><i>
+<ul><i>
 <li>supports courses from the Faculty of Science through data maintained from courses.xml.gz</li>
-<li>enables users to browse courses by department/li>
+<li>enables users to browse courses by department</li>
 <li>enables users to search for courses by keyword</li>
 <li>enables users to see courses’ catalog numbers</li>
 <li>enables users to add courses to lists</li>
