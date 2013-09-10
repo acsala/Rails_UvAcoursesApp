@@ -6,7 +6,7 @@ UvAcoursesApp
 List of features of UvAcoursesApp:
 <ul><i>
 <li>supports courses from the Faculty of Science through data maintained from courses.xml.gz</li>
-<li>enables users to browse courses by department</li>
+<li>enables users to browse courses</li>
 <li>enables users to search for courses by keyword</li>
 <li>enables users to see courses’ catalog numbers</li>
 <li>enables users to add courses to lists</li>
