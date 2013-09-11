@@ -9,13 +9,13 @@ Design document of UvAcoursesApp
 
 - more advanced sketches of UIs.
 
-<p><b>Section 1 – Purpose of project/sub-system</p>
+# Section 1 – Purpose of project/sub-system
 Mobile web app that allows users to shop for University of Amsterdam courses. Course data is mainained from an xml file and 
 is loaded into SQLite tables.
 <br>Users are able to browse courses, search courses by keywords,
 add courses to lists (Courses_I'm_shopping/Courses_I'm_taking), browse recently viewed courses.
 
-<p><b>Section 2 – List of database tables and fields </p>
+# Section 2 – List of database tables and fields
 
 Table Course fields:
 <ul><i>
@@ -45,7 +45,7 @@ Table Courses_Taking field:
 <li>Course_ID</li>
 </ul>
 
-<p><b>Section 3 – A list of classes and methods</p>
+# Section 3 – A list of classes and methods
 
 <b>Models:
 
@@ -55,16 +55,15 @@ There is two models going to be implemented:
 <li>Course</li>
 </ul>
 
-class User < ActiveRecord::Base
-<br>  may have many courses
-<br>  attr_accessible :name, :uniqueness => true
-<br>end
-
-<br>class Course < ActiveRecord::Base
-<br>  may belong to :user
-<br>  attr_accessible :name, :ects, :year, :institute, :description
-<br>  validates :name, :uniqueness => true
-<br>end
+    class User < ActiveRecord::Base
+      may have many courses
+      attr_accessible :name, :uniqueness => true
+    end
+    class Course < ActiveRecord::Base
+      may belong to :user
+      attr_accessible :name, :ects, :year, :institute, :description
+      validates :name, :uniqueness => true
+    end
 
 <b>Views
 <ul>
