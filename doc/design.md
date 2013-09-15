@@ -114,3 +114,58 @@ class CoursesController < ApplicationController
   end
 end
 
+# Style guide
+
+Commenting & Documentation
+
+    Preferebly comment on each function, short descreption about it's purpose (I'm not going to comment out
+    code that is generated with scaffolds though)
+
+Indentation
+
+    Preferred identation style:
+
+    def create
+      @course = Course.new(course_params)
+      
+      respond_to do |format|
+        if @course.save
+          format.html { redirect_to @course, notice: 'Course was successfully created.' }
+          format.json { render action: 'show', status: :created, location: @course }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @course.errors, status: :unprocessable_entity }
+        end
+      end
+    end
+
+Code Grouping
+
+    Code lines that are that are suppose to serve the same task are going to be arringed in blocks and these
+    blocks will be separated with spaces.
+
+Naming Scheme
+    
+    Prefer usage of camelCase, such as: NewObjec, PriceIndex etc..
+    
+DRY Principle
+
+    The same piece of code should not be repeated over and over again.
+
+No Deep Nesting
+
+    Preferablu reduce level of nesting, 
+
+Limited Line Length
+
+    Avoid writing horizontally long lines of code.
+
+Capitalize SQL Special Words
+
+    Capitalize SQL special words and function names to to distinguish them from your table and column names.
+    
+Source for style document:
+<a href='http://net.tutsplus.com/tutorials/html-css-techniques/top-15-best-practices-for-writing-super-readable-code/'>
+Top 15+ Best Practices for Writing Super Readable Code</a>
+    
+
