@@ -20,7 +20,7 @@
         <td><%= course.Name %></td>
         <td><%= course.Ects %></td>
         <td><%= truncate(course.Institute) %></td>
-        <td><%= truncate(course.Programme) %></td>
+        <td><%= course.Programme %></td>
         <!--<td><%= course.Description %></td>
         <!--This line is going to truncate the Descreptuon of courses-->
         <td><%= truncate(course.Description) %></td>

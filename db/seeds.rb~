@@ -21,7 +21,10 @@ Course.create(:Name => 'Theorie en praktijk van het vertalen',
   :Ects => 12,
   :Institute => 'Taal- en letterkunde',
   :Programme => 'Keuzevakken en minors Taal- en letterkunde (BA)',
-  :Description => 'De cursus bestaat uit een theoretisch en een praktisch gedeelte. In het theoretische gedeelte wordt een overzicht gegeven van de verschillende soorten vertaling: schriftelijk versus mondeling, interlinguaal versus intralinguaal en intersemiotisch etc. Het historisch overzicht van het denken over vertalen vormt de aanleiding tot een systematisch overzicht van hedendaagse vertaalopvattingen en van terugkerende discussies in de reflectie over het vertalen.',
+  :Description => 
+    %{<p>
+        <em>De cursus bestaat uit een theoretisch en een praktisch gedeelte. In het theoretische gedeelte wordt een overzicht gegeven van de verschillende soorten vertaling: schriftelijk versus mondeling, interlinguaal versus intralinguaal en intersemiotisch etc. Het historisch overzicht van het denken over vertalen vormt de aanleiding tot een systematisch overzicht van hedendaagse vertaalopvattingen en van terugkerende discussies in de reflectie over het vertalen. 
+      </p>},
   )
 # . . .
 
@@ -29,5 +32,7 @@ Course.create(:Name => 'Onderwijssociologie',
   :Ects => 6,
   :Institute => 'College Pedagogiek, Onderwijskunde en Lerarenopleiding',
   :Programme => 'Bachelor Onderwijskunde',
-  :Description => 'Algemeen gesproken is de module opgezet als een plaatsing van het onderwijs in wat in de sociologie de dynamiek van de moderniteit wordt genoemd.',
+  :Description => 
+    %{<p>
+        <em>Algemeen gesproken is de module opgezet als een plaatsing van het onderwijs in wat in de sociologie de dynamiek van de moderniteit wordt genoemd.</p>},
   )
