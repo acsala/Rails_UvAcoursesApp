@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<h2>Your Pragmatic Cart</h2> <ul>
+
+
+	<% @cart.line_course.each do |item| %>
+
+	<li><%= item.course.Name %></li>
+	<li><%= item.quantity %> &times; <%= item.course.Name %></li>
+
+	<% end %>
+
+</ul>

@@ -1,0 +1,2 @@
+module LineCoursesHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @line_course.course_id %>
+</p>
+
+<p>
+  <strong>Cart:</strong>
+  <%= @line_course.cart_id %>
+</p>
+
+<%= link_to 'Edit', edit_line_course_path(@line_course) %> |
+<%= link_to 'Back', line_courses_path %>
