@@ -1,8 +1,4 @@
 UvAcoursesApp::Application.routes.draw do
-  resources :line_courses
-
-  resources :carts
-
   resources :courses
 
   resources :users
@@ -11,7 +7,7 @@ UvAcoursesApp::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'courses#index'
+  root 'course#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,5 +1,14 @@
 <h1>Listing courses</h1>
 
+<div class="search">
+
+	<%= form_tag(courses_path, :method => "get", id: "search-form") do %>
+							
+		<%= text_field_tag :search, params[:search], placeholder: "Search Course" %>
+		<%= submit_tag "Search" %>
+		<% end %>
+</div>
+
 <table>
   <thead>
     <tr>
@@ -15,7 +24,7 @@
   </thead>
 
   <tbody>
-    <% @courses.each do |course| %>
+    <% @posts.each do |course| %>
       <tr>
         <td><%= course.Name %></td>
         <td><%= course.Ects %></td>
@@ -24,6 +33,8 @@
         <!--<td><%= course.Description %></td>
         <!--This line is going to truncate the Descreptuon of courses-->
         <td><%= truncate(course.Description) %></td>
+        
+        <!--The default HTTP method for a link is a get, the default HTTP method for a button is a post, and Rails uses these conventions to 		     					determine which method to call.-->
         <td><%= button_to 'Add to Cart', line_courses_path(:course_id => course) %></td>
         <!--<td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>

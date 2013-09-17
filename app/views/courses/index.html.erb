@@ -1,5 +1,14 @@
 <h1>Listing courses</h1>
 
+<div class="search">
+
+	<%= form_tag(courses_path, :method => "get", id: "search-form") do %>
+							
+		<%= text_field_tag :search, params[:search], placeholder: "Search Course" %>
+		<%= submit_tag "Search" %>
+		<% end %>
+</div>
+
 <table>
   <thead>
     <tr>
@@ -15,7 +24,7 @@
   </thead>
 
   <tbody>
-    <% @courses.each do |course| %>
+    <% @search.each do |course| %>
       <tr>
         <td><%= course.Name %></td>
         <td><%= course.Ects %></td>
