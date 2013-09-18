@@ -33,9 +33,10 @@
         <!--<td><%= course.Description %></td>
         <!--This line is going to truncate the Descreptuon of courses-->
         <td><%= truncate(course.Description) %></td>
+        <td><%= button_to "Show", course, :id => "open-contacts-dialog-btn", 
+        :class => "inbox-sf-add-btn tip", :method => :get %></td>
         
-        <!--The default HTTP method for a link is a get, the default HTTP method for a button is a post, and Rails uses these conventions to 		     					determine which method to call.-->
-        <td><%= button_to 'Add to Cart', line_courses_path(:course_id => course) %></td>
+        
         <!--<td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->

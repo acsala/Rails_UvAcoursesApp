@@ -40,7 +40,7 @@ class LineCoursesController < ApplicationController
         #:notice => 'Line item was successfully created.') }
         
         # redirect the browser back to the index insted of individual carts
-        format.html { redirect_to(courses_url) }
+        format.html { redirect_to(@cart) }
         
         format.xml  { render :xml => @line_course,
         :status => :created, :location => @line_course }

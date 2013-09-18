@@ -46,7 +46,7 @@
         
           <ul class="nav navbar-nav" id="myTab">
             
-            <li class="active"><a href="#home">Home</a></li>
+            <li class="active"><a href="#home">`Browse Courses</a></li>
             
             <!--Dropdown menu-->
             <li class="dropdown">
@@ -66,21 +66,8 @@
     </div>
 
     <div class="container">
-    
-    		<div class="search">
-    		 <ul>
-    		 <%= form_tag(courses_path, :method => "get", id: "search-form") do %>
-							<%= text_field_tag :search, params[:search], placeholder: "Search Course" %>
-							<%= submit_tag "Search" %>
-							<% end %>
-    <% @posts.each do |grant| %>
-  <li><%= link_to grant.Name, 
-    :action => 'show', :id => grant.id  %></li>
-  <% end %>
-  </ul>
-    		</div>
 			<div class="tab-content">
-				<div class="tab-pane active" id="home"><p class="lead"><%= yield %></p></div>
+				<div class="tab-pane active" id="home"><p class="lead"><%= render @form %></p></div>
 				<div class="tab-pane" id="shopping"><%= render @cart %></div>
 				<div class="tab-pane" id="taking">555</div>
 				<div class="tab-pane" id="recent">..55.</div>

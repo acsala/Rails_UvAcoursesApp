@@ -17,6 +17,7 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
+   @cart = current_cart
   end
 
   # GET /courses/new

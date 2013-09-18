@@ -29,7 +29,6 @@
 
 <!--The default HTTP method for a link is a get, the default HTTP method for a button is a post, and Rails uses these conventions to 		     					determine which method to call.-->
 <td><%= button_to 'Add to Cart', line_courses_path(:course_id => @course) %>
-
 <%= button_to "Back", courses_path, :id => "open-contacts-dialog-btn", 
         :class => "inbox-sf-add-btn tip", :method => :get %></td>
 

@@ -39,7 +39,7 @@ class LineCoursesController < ApplicationController
         #format.html { redirect_to(@line_course.cart,
         #:notice => 'Line item was successfully created.') }
         
-        # app changed to ajax so redirect the browser back to the index insted of individual carts
+        # redirect the browser back to the index insted of individual carts
         format.html { redirect_to(courses_url) }
         
         format.xml  { render :xml => @line_course,

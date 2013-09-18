@@ -7,10 +7,10 @@ class CoursesController < ApplicationController
     @courses = Course.all
     @cart = current_cart
     if params[:search]
-			@posts = Course.search(params[:search]).order("created_at DESC")
+			@search = Course.search(params[:search]).order("created_at DESC")
 		else
 
-			@posts = Course.all.order('created_at DESC')
+			@search = Course.all.order('created_at DESC')
 		end
   end
 
