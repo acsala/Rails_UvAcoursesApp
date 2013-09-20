@@ -26,7 +26,7 @@
   <tbody>
     <% @search.each do |course| %>
       <tr>
-      		<% if course.Ects? %>
+      		<% if course.Name? %>
         <td><%= course.Name %></td>
         <td><%= course.Ects %></td>
         <td><%= truncate(course.Institute) %></td>

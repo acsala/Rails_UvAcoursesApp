@@ -6,6 +6,10 @@ class CoursesController < ApplicationController
   def index
     @courses = Course.all
     @cart = current_cart
+    
+    @line_courses = LineCourse.all
+    
+    
     if params[:search]
 			@search = Course.search(params[:search]).order("created_at DESC")
 		else
