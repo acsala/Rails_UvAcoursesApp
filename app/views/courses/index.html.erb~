@@ -26,6 +26,7 @@
   <tbody>
     <% @search.each do |course| %>
       <tr>
+      		<% if course.Ects? %>
         <td><%= course.Name %></td>
         <td><%= course.Ects %></td>
         <td><%= truncate(course.Institute) %></td>
@@ -33,14 +34,15 @@
         <!--<td><%= course.Description %></td>
         <!--This line is going to truncate the Descreptuon of courses-->
         <td><%= truncate(course.Description) %></td>
-        <%= button_to "Show", course, :id => "open-contacts-dialog-btn", 
-        :class => "inbox-sf-add-btn tip", :method => :get %>
+        <td><%= button_to "Show", course, :id => "open-contacts-dialog-btn", 
+        :class => "inbox-sf-add-btn tip", :method => :get %></td>
         
         
         <!--<td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
