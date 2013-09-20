@@ -8,7 +8,7 @@ class Cart < ActiveRecord::Base
 		if current_course
     		current_course.quantity += 1
 		else
-    		current_course = line_courses.build(:course_id => course_id)
+    		current_course = line_course.build(:course_id => course_id)
 		end
   		current_course
 	end

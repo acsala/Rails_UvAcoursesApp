@@ -4,6 +4,7 @@
 
 <table>
 	<% if cart.line_course %>
+	<%= @cart.line_course.all %>
   <%= render(cart.line_course) %>
 	<% end %>
 	<tr>

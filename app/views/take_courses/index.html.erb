@@ -1,0 +1,29 @@
+<h1>Listing take_courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Course</th>
+      <th>Cart</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @take_courses.each do |take_course| %>
+      <tr>
+        <td><%= take_course.course_id %></td>
+        <td><%= take_course.cart_id %></td>
+        <td><%= link_to 'Show', take_course %></td>
+        <td><%= link_to 'Edit', edit_take_course_path(take_course) %></td>
+        <td><%= link_to 'Destroy', take_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Take course', new_take_course_path %>

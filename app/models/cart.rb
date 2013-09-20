@@ -1,6 +1,7 @@
 class Cart < ActiveRecord::Base
 	# The :dependent => :destroy part indicates that the existence of line items is dependent on the existence of the cart.
 	has_many :line_course, :dependent => :destroy
+	has_many :take_course, :dependent => :destroy
 	
 	#checks whether our list of items already includes the course we’re adding; if it does, it bumps the quantity, and if it doesn’t, it builds a new 			LineCourse
 	def add_course(course_id)

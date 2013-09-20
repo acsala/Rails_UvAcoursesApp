@@ -1,4 +1,6 @@
 UvAcoursesApp::Application.routes.draw do
+  resources :take_courses
+
   resources :line_courses
 
   resources :carts

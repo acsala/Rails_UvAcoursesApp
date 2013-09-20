@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
 <tr>
-	<td><%= @line_course.course.Name %></td>
+	<td><%= line_course.course.Name %></td>
+	<td><%= button_to 'Add to take', take_courses_path(:course_id => course) %></td>
 </tr>

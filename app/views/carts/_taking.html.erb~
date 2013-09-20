@@ -5,8 +5,8 @@
 <table>
 	<tr>
 	
-		<%= @cart.line_course.all %>
-  		<%= render @cart.line_course.where(cart_id: '1') %>
+		<%= @cart.take_course.all %>
+  		<%= render @cart.take_course %>
   		
   </tr>
   
