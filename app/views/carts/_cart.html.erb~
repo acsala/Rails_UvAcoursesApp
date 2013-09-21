@@ -3,8 +3,9 @@
 <h1><div class="cart_title">Courses you are shopping</div></h1>
 
 <table>
-	<% if cart.line_course %>
-  <%= render(cart.line_course) %>
+	<% if cart.line_course.Name %>
+	<%= @cart.line_course.all %>
+  <%= render(@cart.line_course) %>
 	<% end %>
 	<tr>
 		

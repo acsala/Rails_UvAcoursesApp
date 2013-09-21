@@ -6,7 +6,7 @@
 	<tr>
 	
 		<%= @cart.take_course.all %>
-  		<%= render @cart.take_course %>
+  		<%= render(@cart.take_course) %>
   		
   </tr>
   
