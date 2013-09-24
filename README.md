@@ -15,6 +15,7 @@ List of features of UvAcoursesApp:
 
 Technologies implemented:
 <ul><i>
+<li>Bootstrap</li>
 <li>HTML</li>
 <li>CSS</li>
 <li>jQuery</li>
