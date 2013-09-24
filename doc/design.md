@@ -17,52 +17,110 @@ add courses to lists (Courses_I'm_shopping/Courses_I'm_taking), browse recently 
 
 # Section 2 – List of database tables and fields
 
-Table Course fields:
-<ul><i>
-<li>Name</li>
-<li>Ects</li>
-<li>Year</li>
-<li>Institute</li>
-<li>Course_ID</li>
-<li>Description</li>
-</ul>
+Table courses fields:
+
+    t.string   "Name"
+    t.integer  "Ects"
+    t.string   "Institute"
+    t.string   "Programme"
+    t.text     "Description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
 
 Table User field:
-<ul><i>
-<li>User_ID</li>
-<li>Name</li>
-</ul>
+    
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
 
-Table Shopping_List field:
-<ul><i>
-<li>User_ID</li>
-<li>Course_ID</li>
-</ul>
+Table Carts field:
 
-Table Courses_Taking field:
-<ul><i>
-<li>User_ID</li>
-<li>Course_ID</li>
-</ul>
+    t.datetime "created_at"
+    t.datetime "updated_at"
+
+Table line_courses field:
+
+    t.integer  "course_id"
+    t.integer  "cart_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    
+Table shoppings field:
+
+    t.integer  "Course_ID"
+    t.integer  "User_ID"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    
+Table take_courses field:
+
+    t.integer  "course_id"
+    t.integer  "cart_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
 
 # Section 3 – A list of classes and methods
 
 <b>Models:
 
-There is two models going to be implemented:
+Implemented models:
 <ul><i>
 <li>User</li>
 <li>Course</li>
+<li>Cart</li>
+<li>Line_Course</li>
+<li>Take_course</li>
+
+Cart is implemented for supporting Line_Course (these are the courses the user are willing to shop) and Take_Course
+(these are the courses the user takes).
+
 </ul>
 
     class User < ActiveRecord::Base
       may have many courses
       attr_accessible :name, :uniqueness => true
     end
+	
+-
+    
     class Course < ActiveRecord::Base
-      may belong to :user
-      attr_accessible :name, :ects, :year, :institute, :description
-      validates :name, :uniqueness => true
+      has_many :line_courses
+      has_many :take_courses
+      
+    #  def self.search(search)
+    #  		search_condition = "%" + search + "%"
+    #  		find(:all, :conditions => ['title LIKE ? OR description LIKE ?', search_condition, search_condition])
+    #	end
+    	
+    	def self.search(query)
+    		# where(:title, query) -> This would return an exact match of the query
+    		where("Name like ?", "%#{query}%") 
+    	end
+    	
+    end
+	
+-
+    
+    class Cart < ActiveRecord::Base
+	# The :dependent => :destroy part indicates that the existence of line items is dependent on the existence of the cart.
+	has_many :line_course, :dependent => :destroy
+	has_many :take_course, :dependent => :destroy
+	
+-
+    class LineCourse < ActiveRecord::Base
+    
+    	belongs_to :course
+    	belongs_to :cart
+    
+    end
+	
+-
+    
+    class TakeCourse < ActiveRecord::Base
+
+	belongs_to :course
+	belongs_to :cart
+	
     end
 
 <b>Views
@@ -89,31 +147,71 @@ Courses_I'm_taking Page, show courses the user added to his/her courses i'm taki
 </ul>
 
 <p><b>Controllers</p>
-Two controllers are going to be implemented: Users and Courses.
+The controllers are generated with scaffold command, therefor index, show, new, edit, create, update and destroy
+classes are automaticly created for every model.
 
-class UsersController < ApplicationController
-for Users, index, create, show methods are planned to be implemented
-end
+The application is going to render it's pages, the main page is courses_index page, which is rendered into the
+application.html.erb template. Through this template, all the other available pages will be shown by a tabbing
+in JavaScript.
 
-class CoursesController < ApplicationController
-  def index # this method will suplement Browsing_Courses Page / index view
-    @courses = Course.all
-  end
-  
-  def show # show method will suplement Clicked_On_Course Page
-    @course = Course.find(params[name, ects, year, etc...])
-  end
-  
-  def shopping
-    @courses = Shopping_List.all # this method should look up all the course ids in Shoppinglist and pull the names
-    from the Course table
-  end
-  
-  def taking
-    @courses = Courses_Taking.all # similar to shopping but querying CourseTaking
-  end
-end
+To get this all work, the following extra classes are added to controlers:
 
+    class CoursesController < ApplicationController
+      before_action :set_course, only: [:show, :edit, :update, :destroy]
+    
+      # GET /courses
+      # GET /courses.json
+      def index
+        @courses = Course.all
+        @cart = current_cart
+        
+        @line_courses = LineCourse.all
+        
+        
+        if params[:search]
+    			@search = Course.search(params[:search]).order("created_at DESC")
+    		else
+    
+    			@search = Course.all.order('created_at DESC')
+    		end
+      end
+	
+-
+    class ApplicationController < ActionController::Base
+      # Prevent CSRF attacks by raising an exception.
+      # For APIs, you may want to use :null_session instead.
+      protect_from_forgery with: :exception
+      
+    	#The current_cart starts by getting the :cart_id from the session object and then attempts to find a cart corresponding to this id. If such a cart 			record is not found (which will happen if the id is nil or invalid for any reason), then this method will proceed to create a new Cart, store the id 			of the created cart into the session, and then return the new cart.
+    	
+    	#Note that we place the current_cart method in the ApplicationController and mark it as private. This makes this method available only to controllers 	and fur- thermore prevents Rails from ever making it available as an action on the controller.
+      private
+    		def current_cart
+    			Cart.find(session[:cart_id])
+    		rescue ActiveRecord::RecordNotFound
+    			cart = Cart.create
+    			session[:cart_id] = cart.id
+    			cart
+      		end
+      #---------
+      
+      
+    end
+	
+-
+    class LineCoursesController < ApplicationController
+    def create
+  		#find the shopping cart for the current session (creating one if there isn’t one there already), add the selected product to that cart, and 				display the cart contents
+    @cart = current_cart
+    #use the params object to get the :product_id parameter from the request
+		
+		course = Course.find(params[:course_id])
+		
+		#pass that product we found into @cart.line_items.build. This causes a new line item relationship to be built between the @cart object and the 			product
+		@line_course = @cart.add_course(course.id)
+    
+    
+    
 # Style guide
 
 Commenting & Documentation
