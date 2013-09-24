@@ -3,7 +3,7 @@
 <h1><div class="cart_title">Courses you are shopping</div></h1>
 
 <table>
-	<% if cart.line_course.Name %>
+	<% if cart.line_course %>
 	<%= @cart.line_course.all %>
   <%= render(@cart.line_course) %>
 	<% end %>
@@ -11,8 +11,12 @@
 		
   </tr>
 </table>
-
-<%= button_to 'Empty cart', cart, :method => :delete,
-    :confirm => 'Are you sure?' %>
-<%= button_to "Back", courses_path, :id => "open-contacts-dialog-btn", 
-    :class => "inbox-sf-add-btn tip", :method => :get %></td>
+<br>>
+<div style="float:left;">
+	<%= button_to 'Empty cart', cart, :method => :delete,
+	:confirm => 'Are you sure?' %>
+</div>
+<div style="float:left;">    
+	<%= button_to "Back to Browse", courses_path, :id => "open-contacts-dialog-btn", 
+	:class => "inbox-sf-add-btn tip", :method => :get %>
+</div>

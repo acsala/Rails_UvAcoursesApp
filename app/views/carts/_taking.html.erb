@@ -12,7 +12,12 @@
   
 </table>
 
-<%= button_to 'Empty cart', @cart, :method => :delete,
-    :confirm => 'Are you sure?' %>
-<%= button_to "Back", courses_path, :id => "open-contacts-dialog-btn", 
-    :class => "inbox-sf-add-btn tip", :method => :get %></td>
+<br>
+<div style="float:left;">
+	<%= button_to 'Empty cart', @cart, :method => :delete,
+	:confirm => 'Are you sure?' %>
+</div>
+<div style="float:left;">    
+	<%= button_to "Back to Browse", courses_path, :id => "open-contacts-dialog-btn", 
+	:class => "inbox-sf-add-btn tip", :method => :get %>
+</div>

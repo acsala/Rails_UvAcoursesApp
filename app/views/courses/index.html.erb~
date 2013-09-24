@@ -1,14 +1,17 @@
 <h1>Listing courses</h1>
 
-<div class="search">
+
+	<div class="search">
 
 	<%= form_tag(courses_path, :method => "get", id: "search-form") do %>
 							
 		<%= text_field_tag :search, params[:search], placeholder: "Search Course" %>
 		<%= submit_tag "Search" %>
 		<% end %>
-</div>
+	</div>
 
+
+<br>
 <table>
   <thead>
     <tr>
@@ -26,7 +29,6 @@
   <tbody>
     <% @search.each do |course| %>
       <tr>
-      		<% if course.Name? %>
         <td><%= course.Name %></td>
         <td><%= course.Ects %></td>
         <td><%= truncate(course.Institute) %></td>
@@ -35,14 +37,12 @@
         <!--This line is going to truncate the Descreptuon of courses-->
         <td><%= truncate(course.Description) %></td>
         <td><%= button_to "Show", course, :id => "open-contacts-dialog-btn", 
-        :class => "inbox-sf-add-btn tip", :method => :get %></td>
-        
+        :class => "inbox-sf-add-btn tip", :method => :get, :class => "button" %></td>
         
         <!--<td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
-    <% end %>
     <% end %>
   </tbody>
 </table>

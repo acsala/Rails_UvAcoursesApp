@@ -28,11 +28,13 @@
 </p>
 
 <!--The default HTTP method for a link is a get, the default HTTP method for a button is a post, and Rails uses these conventions to 		     					determine which method to call.-->
-<td><%= button_to 'Add to Cart', line_courses_path(:course_id => @course) %></td>
-<td><%= button_to 'Add to take', take_courses_path(:course_id => @course) %></td>
-<td>
-<%= button_to "Back", courses_path, :id => "open-contacts-dialog-btn", 
-        :class => "inbox-sf-add-btn tip", :method => :get %></td>
+<div style="float:left;">
+	<%= button_to 'Add to Cart', line_courses_path(:course_id => @course), :class => "button" %>
+</div>
+<div style="float:left;"><!--Div float left is used to put the buttons in one line-->
+	<%= button_to "Back", courses_path, :id => "open-contacts-dialog-btn", 
+	:class => "inbox-sf-add-btn tip", :method => :get, :class => "button" %>
+</div>
 
 <!--<%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>-->
