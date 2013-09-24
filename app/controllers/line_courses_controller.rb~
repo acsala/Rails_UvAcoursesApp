@@ -32,7 +32,7 @@ class LineCoursesController < ApplicationController
 		course = Course.find(params[:course_id])
 		
 		#pass that product we found into @cart.line_items.build. This causes a new line item relationship to be built between the @cart object and the 			product
-		@line_course = @cart.add_course(course.id)
+		@line_course = @cart.shopping_course(course.id)
 
     respond_to do |format|
       if @line_course.save
@@ -40,7 +40,7 @@ class LineCoursesController < ApplicationController
         #:notice => 'Line item was successfully created.') }
         
         # redirect the browser back to the index insted of individual carts
-        format.html { redirect_to(@cart) }
+        format.html { redirect_to(@line_course.cart) }
         
         format.xml  { render :xml => @line_course,
         :status => :created, :location => @line_course }
