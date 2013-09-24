@@ -35,7 +35,7 @@ class TakeCoursesController < ApplicationController
 		
 		#pass that product we found into @cart.line_items.build. This causes a new line item relationship to be built between the @cart object and the 			product
 		
-		@take_course = @cart.take_course.build(:course_id => course)
+		@take_course = @cart.taking_course(course.id)
 
     respond_to do |format|
       if @take_course.save

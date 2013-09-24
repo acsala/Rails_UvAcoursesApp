@@ -1,5 +1,6 @@
 class Course < ActiveRecord::Base
   has_many :line_courses
+  has_many :take_courses
   
 #  def self.search(search)
 #  		search_condition = "%" + search + "%"

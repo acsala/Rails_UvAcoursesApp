@@ -2,5 +2,7 @@
 
 <tr>
 	<td><%= line_course.course.Name %></td>
-	<td><%= button_to 'Add to take', take_courses_path(:course_id => @line_course) %></td>
+	<td><div style="float:right;">
+		<%= button_to 'Add to take', take_courses_path(:course_id => line_course.course) %>
+	</div></td>
 </tr>

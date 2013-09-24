@@ -4,12 +4,22 @@ class Cart < ActiveRecord::Base
 	has_many :take_course, :dependent => :destroy
 	
 	#checks whether our list of items already includes the course we’re adding; if it does, it bumps the quantity, and if it doesn’t, it builds a new 			LineCourse
-	def add_course(course_id)
+	def shopping_course(course_id)
 		current_course = line_course.find_by_course_id(course_id)
 		if current_course
     		current_course.quantity += 1
 		else
     		current_course = line_course.build(:course_id => course_id)
+		end
+  		current_course
+	end
+	
+	def taking_course(course_id)
+		current_course = take_course.find_by_course_id(course_id)
+		if current_course
+    		
+		else
+    		current_course = take_course.build(:course_id => course_id)
 		end
   		current_course
 	end

@@ -9,7 +9,9 @@ class Course < ActiveRecord::Base
 	
 	def self.search(query)
 		# where(:title, query) -> This would return an exact match of the query
-		where("Name like ?", "%#{query}%") 
+		search_condition = "%#{query}%"
+		where("Name LIKE ? OR Ects LIKE ? OR Institute LIKE ? OR Programme LIKE ? OR Description LIKE ?",
+		search_condition, search_condition, search_condition, search_condition, search_condition) 
 	end
 	
 end

@@ -5,13 +5,14 @@
 <table>
 	<tr>
 	
-		<%= @cart.take_course.all %>
-  		<%= render(@cart.line_course) %>
+		
+  		<%= render(@cart.take_course) %>
   		
   </tr>
   
 </table>
-    
+
+<br>
 <div style="float:left;">
 	<%= button_to 'Empty cart', @cart, :method => :delete,
 	:confirm => 'Are you sure?' %>
