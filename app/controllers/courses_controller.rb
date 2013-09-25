@@ -21,7 +21,18 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
-   @cart = current_cart
+   @courses = Course.all
+    @cart = current_cart
+    
+    @line_courses = LineCourse.all
+    
+    
+    if params[:search]
+			@search = Course.search(params[:search]).order("created_at DESC")
+		else
+
+			@search = Course.all.order('created_at DESC')
+		end
    
   end
 
