@@ -1,0 +1,200 @@
+<courses>
+    <course acode="SCH" code="4HIMS15" sgid="5254CAFE6Y">
+        <name>Chemical Analysis for Forensic Evidence (CAFE) </name>
+        <ects>
+            6
+        </ects>
+        <year>
+        </year>
+        <period>
+            Semester 1 block 2, voertaal English
+        </period>
+        <institute>
+            Masters School of Sciences
+        </institute>
+        <staff_list>
+            <staff id="7079">
+                <name> prof.dr.ir. J.G.M. Janssen </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/7079.html </url>
+            </staff>
+            <staff id="831">
+                <name> prof.dr.ir. P.J. Schoenmakers </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/831.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="25">
+                <name> Master's in Chemistry, track Analytical Sciences </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/25.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;Analytical chemistry is a pervasive science in the forensic field. Many different types of forensic samples are subjected to chemical analysis. The types of samples, sample handling and sample preparation are briefly discussed. Analytical methods are described in two different ways. A technical perspective is offered for those students that are not yet familiar with forensic science. An example-driven forensic perspective is used to illustrate the application of a variety of methods in practice. The possibilities and limitations of analytical methods are discussed. Attention will be paid to special requirements of chemical analysis in a forensic context (quality, traceability, contamination. An important aspect of the course is a meaningful interpretation of the data, based on (Bayesian) statistics. The ultimate objective is to translate analytical data into solid evidence.&lt;/p&gt;
+
+        </description>
+        <timetable>
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;Class handouts will be augmented by a number of (review) articles.&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;At the end of the course the student must be able to&lt;/p&gt;
+            &lt;ul class="bullets-outside"&gt;
+            &lt;li&gt;explain the essence of analytical methods, sampling and sample-preparation techniques used in forensic science; &lt;/li&gt;
+            &lt;li&gt;describe the possibilities and limitations of these methods;&lt;/li&gt;
+            &lt;li&gt;select appropriate analytical and sample-preparation methods for specific forensic questions;&lt;/li&gt;
+            &lt;li&gt;explain the special (quality) requirements for sample-handling and measurements in forensic analytical chemistry;&lt;/li&gt;
+            &lt;li&gt;interpret analytical data using forensic statistics.&lt;/li&gt;
+            &lt;/ul&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;The course has an open-book exam in which the student’s understanding of the subject is addressed.  Interpretation skills will be assessed by computer-based exercises.&lt;/p&gt;
+
+        </examination>
+    </course>
+    <course acode="HTLK" code="105217002" sgid="105217002">
+        <name>Theorie en praktijk van het vertalen </name>
+        <ects>
+            12
+        </ects>
+        <year>
+        </year>
+        <period>
+            Semester 2 blok 1 en 2
+        </period>
+        <institute>
+            Taal- en letterkunde
+        </institute>
+        <staff_list>
+            <staff id="9074">
+                <name> dr. E.R.G. Metz </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/9074.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="942">
+                <name> Keuzevakken en minors Taal- en letterkunde (BA) </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/942.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;De cursus bestaat uit een theoretisch en een praktisch gedeelte. In het theoretische gedeelte wordt een overzicht gegeven van de verschillende soorten vertaling: schriftelijk versus mondeling, interlinguaal versus intralinguaal en intersemiotisch etc. Het historisch overzicht van het denken over vertalen vormt de aanleiding tot een systematisch overzicht van hedendaagse vertaalopvattingen en van terugkerende discussies in de reflectie over het vertalen. Aandacht gaat naar de culturele context van het vertalen, evenals naar sociologische factoren, bv. de positie van de vertaler op de arbeidsmarkt. In het tweede, praktische gedeelte, worden uiteenlopende aspecten van het vertaalproces behandeld, zoals de omgang met semantische en stilistische problemen (polysemie, dialecten…) en het gebruik van hulpmiddelen ( computer aided translation e.a.). De theoretische inzichten worden in werkcolleges toegepast op tekstmateriaal dat betrekking heeft op de taal of talen waar de student zich in specialiseert. Daarbij komen zowel literaire als niet-literaire tekstgenres aan bod. &lt;/p&gt;
+
+        </description>
+        <timetable>
+
+            &lt;p&gt;volgt&lt;/p&gt;
+
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;volgt&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;De student heeft een inzicht in de geschiedenis van het denken over vertalen en is vertrouwd met de belangrijkste theoretische modellen en concepten van de hedendaagse vertaalwetenschap. Hij is in staat verschillende tekstsoorten te onderscheiden en de daarmee verbonden vertaalproblemen te detecteren en te analyseren. Hij past de verworven theoretische inzichten toe op vertalingen uit en naar de taal of talen die hij bestudeert, evenals op zijn eigen vertaalactiviteit.&lt;/p&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;volgt&lt;/p&gt;
+
+        </examination>
+    </course>
+    <course acode="POW" code="70230270AT" sgid="70230270AT">
+        <name>Onderwijssociologie </name>
+        <ects>
+            6
+        </ects>
+        <year>
+            2012-2013
+        </year>
+        <period>
+            Semester 1 blok 1
+        </period>
+        <institute>
+            College Pedagogiek, Onderwijskunde en Lerarenopleiding
+        </institute>
+        <staff_list>
+            <staff id="4751">
+                <name> drs. E.J.C. Wendrich </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/d/4751.html </url>
+            </staff>
+        </staff_list>
+        <programmes>
+            <programme id="191">
+                <name> Bachelor Onderwijskunde </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/191.html </url>
+            </programme>
+            <programme id="885">
+                <name> Minor Onderwijskunde </name>
+                <url> http://studiegids.uva.nl/web/uva/sgs/nl/p/885.html </url>
+            </programme>
+        </programmes>
+        <description>
+
+            &lt;p&gt;&lt;/p&gt;
+            &lt;p&gt;Algemeen gesproken is de module opgezet als een plaatsing van het onderwijs in wat in de sociologie de dynamiek van de moderniteit wordt genoemd.    
+
+            &lt;br/&gt;Deze plaatsing krijgt gestalte in twee hoofdonderwerpen. Allereerst worden veranderingen in het onderwijs in verband gebracht met het hedendaagse streven naar economische groei, “innovatie” en versterking van nationale concurrentiekracht. Daarbij zal de aandacht onder meer uitgaan naar veranderingen in en de publieke en intellectuele gedachtewisseling over het beroeps – en algemeen vormend onderwijs. 
+
+            &lt;br/&gt;Onder de noemer Subjectivering en Onderwijs komt een twee hoofdthema aan de orde. Dit bestaat in de kern in een situering van het onderwijs in de context van nieuwe maatschappelijke spanningsverhoudingen en een plaatsing van onderwijs in het perspectief van de vorming van actieve, maatschappelijk creatieve individuen. Een en ander zal worden georganiseerd rond een bespreking van denkbeelden van de socioloog Alain Touraine.  
+
+            &lt;br/&gt;Afgesloten wordt met aandacht voor en vragen over management en professionaliteit in het onderwijs van nu en in de toekomst.  
+
+            &lt;br/&gt;Aldus opgezet sluit de module aan op de onderdelen Onderwijskunde CTP I en II in het tweede jaar en komen verworven inzichten van pas in later te volgen modulen op het terrein van onderwijsbeleid en curriculum(ontwikkeling). 
+
+            &lt;/p&gt;
+
+        </description>
+        <timetable>
+
+            &lt;p&gt;Woensdagmiddag 13-17 uur.&lt;/p&gt;
+
+        </timetable>
+        <lecture_material>
+
+            &lt;p&gt;Reader Onderwijssociologie verkrijgbaar bij de Onderwijsbalie.&lt;/p&gt;
+
+        </lecture_material>
+        <goals>
+
+            &lt;p&gt;- Verwerving van funderende kennis en inzichten op het gebied van een sociologische benadering  van veranderingen van/in het onderwijs.
+
+            &lt;br/&gt;- Verwerving van vermogens om vanuit verschillende sociologische gezichtspunten hedendaagse veranderingen in het onderwijs en de daarin besloten liggende ambivalenties en spanningen maatschappelijk-historisch te situeren en interpreteren. 
+
+            &lt;br/&gt;- Verwerving van het vermogen om vanuit sociologische gezichtspunten beleidsmatige en praktische vragen in mogelijke onderzoeksvragen te herformuleren. 
+
+            &lt;br/&gt;- Bijdragen aan de versterking van een academische houding in het algemeen en die m.b.t. een sociologische gevoeligheid in het bijzonder.    
+
+            &lt;/p&gt;
+
+        </goals>
+        <participant_count>
+        </participant_count>
+        <specialities>
+        </specialities>
+        <examination>
+
+            &lt;p&gt;Take-home tentamen&lt;/p&gt;
+
+        </examination>
+    </course>
+</courses>
+    
