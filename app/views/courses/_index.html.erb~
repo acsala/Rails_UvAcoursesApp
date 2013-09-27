@@ -19,7 +19,7 @@
       <th>Ects</th>
       <th>Institute</th>
       <th>Programme</th>
-      <th>Description</th>
+
       <th></th>
       <th></th>
       <th></th>
@@ -35,7 +35,7 @@
         <td><%= truncate(course.Programme) %></td>
         <!--<td><%= course.Description %></td>
         <!--This line is going to truncate the Descreptuon of courses-->
-        <td><%= truncate(course.Description.html_safe) %></td>
+
         <td><%= button_to "Show", course, :id => "open-contacts-dialog-btn", 
         :class => "inbox-sf-add-btn tip", :method => :get, :class => "button" %></td>
         

@@ -24,7 +24,7 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @course.Description %>
+  <%= @course.Description.html_safe %>
 </p>
 
 <!--The default HTTP method for a link is a get, the default HTTP method for a button is a post, and Rails uses these conventions to 		     					determine which method to call.-->
