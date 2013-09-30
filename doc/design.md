@@ -27,11 +27,6 @@ Table courses fields:
     t.datetime "created_at"
     t.datetime "updated_at"
 
-Table User field:
-    
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
 
 Table Carts field:
 
@@ -42,13 +37,6 @@ Table line_courses field:
 
     t.integer  "course_id"
     t.integer  "cart_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    
-Table shoppings field:
-
-    t.integer  "Course_ID"
-    t.integer  "User_ID"
     t.datetime "created_at"
     t.datetime "updated_at"
     
@@ -65,7 +53,6 @@ Table take_courses field:
 
 Implemented models:
 <ul><i>
-<li>User</li>
 <li>Course</li>
 <li>Cart</li>
 <li>Line_Course</li>
@@ -136,11 +123,11 @@ Browsing_Courses Page, courses from the database are listed here
 Clicked_On_Course Page, display details of a specific course
 <img src="/Clicked_On_Course%20(6).png" alt="Clicked_On_Course">
 </li>
-<li>course/shopping.html.erb
+<li>line_courses/_line_course.html.erb
 Courses_I'm_shopping Page, display courses the user added to his/hir shopping list
 <img src="/Courses_I'm_shopping%20(3).png" alt="Courses_I'm_shopping">
 </li>
-<li>course/taking.html.erb
+<li>take_course/take_course.html.erb
 Courses_I'm_taking Page, show courses the user added to his/her courses i'm taking list
 <img src="/Courses_I'm_taking%20(4).png" alt="Courses_I'm_taking">
 </li>
